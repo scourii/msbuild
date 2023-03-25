@@ -1,4 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using System;
@@ -2669,7 +2669,7 @@ namespace Microsoft.Build.Execution
                     // cache on child nodes because the OutOfProcNode class sets "autoReloadFromDisk" to "true" which handles the case when a restore modifies
                     // part of the import graph.
                     _buildParameters?.ProjectRootElementCache?.Clear();
-
+                    LogMessage("Cache file has been deleted");
                     FileMatcher.ClearFileEnumerationsCache();
 #if !CLR2COMPATIBILITY
                     FileUtilities.ClearFileExistenceCache();
